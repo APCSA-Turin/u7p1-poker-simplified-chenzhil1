@@ -5,7 +5,7 @@ public class Card{
     private String rank;
     private String suit;
 
-    public Card(String rank, String suit){
+    public Card(String rank, String suit){ //Set Card with parameter
         this.rank = rank;
         this.suit = suit;
     }
