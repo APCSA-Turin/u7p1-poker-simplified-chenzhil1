@@ -20,10 +20,11 @@ public class Player{
     }
 
     public String playHand(ArrayList<Card> communityCards){
-        allCards = hand;
-        for(int i = 0; i < communityCards.size(); i ++) {
-            allCards.add(communityCards.get(i));
-        }      
+        allCards = new ArrayList<>(hand);
+        for (Card card : communityCards) {
+            allCards.add(card);
+        }
+            
         sortAllCards();
         int consecutiveCount = 0;
         for(int i = 0; i < allCards.size() - 1;i ++) {

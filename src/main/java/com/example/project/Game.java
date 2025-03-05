@@ -5,10 +5,10 @@ import java.util.logging.Handler;
 
 public class Game{
     public static String determineWinner(Player p1, Player p2,String p1Hand, String p2Hand,ArrayList<Card> communityCards){
-        if(Utility.getRankValue(p1Hand) > Utility.getRankValue(p2Hand)) {
+        if(Utility.getHandRanking(p1Hand) > Utility.getHandRanking(p2Hand)) {
             return "Player 1 wins!";
         }
-        else if(Utility.getRankValue(p1Hand) < Utility.getRankValue(p2Hand)) {
+        else if(Utility.getHandRanking(p1Hand) < Utility.getHandRanking(p2Hand)) {
             return "Player 2 wins!";
         }
         else {
@@ -45,13 +45,13 @@ public class Game{
         //     communityCards.add(deck.drawCard());
         // }
         Player player = new Player();
-        player.addCard(new Card("9", "♠"));
-        player.addCard(new Card("9", "♣"));
+        player.addCard(new Card("3", "♠"));
+        player.addCard(new Card("6", "♦"));
         
         // Community Cards
         ArrayList<Card> communityCards = new ArrayList<>();
-        communityCards.add(new Card("9", "♦"));
-        communityCards.add(new Card("A", "♥"));
+        communityCards.add(new Card("5", "♣"));
+        communityCards.add(new Card("2", "♠"));
         communityCards.add(new Card("A", "♠"));
         
         
